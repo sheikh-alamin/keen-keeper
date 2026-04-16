@@ -10,7 +10,7 @@ const page = () => {
                 <p className="font-light">Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.</p>
                 <button className="btn bg-[#244D3F] text-white"> <FaPlus></FaPlus> Add a friend</button>
             </div>
-            <div className="grid grid-cols-4 max-w-9/12 mx-auto gap-8 mb-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 max-w-9/12 mx-auto gap-8 mb-10">
                 <div className="text-center py-4 space-y-3 align-middle shadow-md rounded-lg">
                     <h3 className="font-bold text-8 text-[#244D3f]">50</h3>
                     <p>Total Friends</p>

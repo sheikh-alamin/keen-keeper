@@ -135,12 +135,12 @@ const FriendsPage = () => {
 ]
 
     return (
-        <div className="grid grid-cols-4 max-w-9/12 mx-auto gap-4 mb-15">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 max-w-9/12 mx-auto gap-4 mb-15">
             {friends.map(friend => 
             <div key={friend.id} className="text-center p-5 space-y-2 align-middle shadow-md rounded-lg">
                 <Link href={`/friends/${friend.id}`}>
                 <Image src={friend.picture} alt="{friend.name}"  width={80} height={80} className="rounded-full mx-auto" loading="eager" priority/>
-                <h3 className="text-5 font-semibold">{friend.name}</h3>
+                <h3 className="text-base md:text-lg font-semibold">{friend.name}</h3>
                 <p className="text-[#64748B]"><small>{friend.days_since_contact}d Ago</small></p>
                 <div className="uppercase">{friend.tags.map(tag => <span key={tag} className="badge badge-success mr-1">{tag}</span> )}</div>
                 <div className={`badge ${getStatusColor(friend.status)} capitalize text-white`}>{friend.status}</div>
