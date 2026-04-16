@@ -12,14 +12,13 @@ const TimelinePage = () => {
     const [filter, setFilter] = useState("All")
 
     useEffect(() => {
-        // পেজ লোড হলে localStorage থেকে events নাও
         const stored = JSON.parse(
             localStorage.getItem("timeline_events") || "[]"
         )
         setEvents(stored)
     }, [])
 
-    // Filter করা events
+  
     const filteredEvents = filter === "All"
         ? events
         : events.filter(event => event.type === filter)
@@ -28,7 +27,7 @@ const TimelinePage = () => {
         <div className="max-w-4xl mx-auto my-16 px-6">
             <h1 className="text-4xl font-bold mb-8">Timeline</h1>
 
-            {/* Filter Dropdown */}
+          
             <div className="mb-6">
                 <select
                     value={filter}
@@ -42,10 +41,10 @@ const TimelinePage = () => {
                 </select>
             </div>
 
-            {/* Events List */}
+            
             {filteredEvents.length === 0 ? (
                 <p className="text-gray-400 mt-10">
-                    কোনো check-in নেই। বন্ধুর পেজে গিয়ে Call, Text বা Video তে ক্লিক করো!
+                    Nothing to show!
                 </p>
             ) : (
                 <div className="flex flex-col gap-3">

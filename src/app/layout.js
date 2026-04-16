@@ -42,9 +42,9 @@ export default function RootLayout({ children }) {
             <FaFacebook/>
             <FaX/>
           </div>
-          <div className="border-t max-w-11/12 mx-auto border-[#1A8862] flex justify-between pt-5">
+          <div className="border-t max-w-11/12 mx-auto border-[#1A8862] flex flex-col md:flex-row justify-between pt-5">
             <p>© 2026 KeenKeeper. All rights reserved.</p>
-            <ul className="flex gap-3">
+            <ul className="flex flex-col md:flex-row gap-2 md:gap-3">
               <a><li>Privacy policy</li></a>
               <a><li>Terms of service</li></a>
               <a><li>Cookies</li></a>

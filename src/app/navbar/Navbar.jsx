@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FaChartBar, FaClock, FaHome } from "react-icons/fa";
+import NavLinks from "../components/NavLinks";
 
 
 
@@ -19,7 +20,8 @@ const Navbar = () => {
                             <Link href="/" className="btn btn-ghost text-xl font-bold text-[#244D3F] gap-0"><span className="text-[#1F2937]">Keen</span>Keeper</Link>
                           </div>
                           <div className="navbar-end gap-2">
-                            {links} 
+                            {/* {links}  */}
+                            <NavLinks/>
                           </div>
                         </div>
             </div>

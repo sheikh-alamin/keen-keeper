@@ -7,16 +7,14 @@ const CheckInButtons = ({ friendName }) => {
     const router = useRouter()
 
     const handleCheckIn = (type) => {
-        // localStorage থেকে আগের events গুলো নাও
         const events = JSON.parse(
             localStorage.getItem("timeline_events") || "[]"
         )
 
-        // নতুন event বানাও
         const newEvent = {
             id: Date.now(),
-            type,           // "Call" or "Text" or "Video"
-            friendName,     // বন্ধুর নাম
+            type,           
+            friendName,  
             date: new Date().toLocaleDateString("en-US", {
                 month: "long",
                 day: "numeric",
@@ -24,13 +22,13 @@ const CheckInButtons = ({ friendName }) => {
             }),
         }
 
-        // নতুন event সবার আগে রাখো, তারপর পুরানোগুলো
+        
         localStorage.setItem(
             "timeline_events",
             JSON.stringify([newEvent, ...events])
         )
 
-        // Timeline পেজে চলে যাও
+        
         router.push("/timeline")
     }
 
