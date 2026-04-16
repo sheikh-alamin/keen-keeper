@@ -140,11 +140,11 @@ const FriendDetailsPage = async ({params}) => {
     const friend = friends.find(friend => friend.id === parseInt(friendsId))
     // console.log(friend)
     return (
-        <div className="grid grid-cols-3 gap-4 max-w-9/12 my-20 mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-9/12 my-20 mx-auto">
             <div>
                 <div className="shadow-md rounded-lg p-6 flex flex-col justify-center items-center text-center space-y-2">
                     <Image src={friend.picture} alt="{friend.name}"  width={80} height={80} className="rounded-full mx-auto" />
-                    <h1 className="text-5 font-semibold">{friend.name}</h1>
+                    <h1 className="text-base md:text-lg font-semibold">{friend.name}</h1>
                     <div className={`badge ${getStatusColor(friend.status)} capitalize text-white`}>{friend.status}</div>
                     <div className="uppercase">{friend.tags.map(tag => <span key={tag} className="badge badge-success mr-1">{tag}</span> )}</div>
                     <p className="italic">&quot;{friend.bio}&quot;</p>
@@ -156,8 +156,8 @@ const FriendDetailsPage = async ({params}) => {
                 <button className="flex cursor-pointer w-full items-center text-center text-red-600 justify-center p-5 shadow-md rounded-lg gap-3 font-semibold"> <FaTrash/><h1>Delete</h1></button>
             </div>
             {friend && 
-            <div className="col-span-2">
-                <div className="grid grid-cols-3 mx-auto gap-4">
+            <div className="md:col-span-1 lg:col-span-2">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     <div className="text-center py-4 space-y-3 align-middle shadow-md rounded-lg">
                         <h3 className="font-bold text-8 text-[#244D3f]">{friend.days_since_contact}</h3>
                         <p>Days Since Contact</p>
