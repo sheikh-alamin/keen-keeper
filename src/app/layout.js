@@ -6,6 +6,7 @@ import Link from "next/link";
 import Home from "./page";
 import Navbar from "./navbar/Navbar";
 import FriendsPage from "./friends/page";
+import { ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col" suppressHydrationWarning={true}>
         <Navbar/>          
         {children}
+        <ToastContainer/>
         {/* <FriendsPage/> */}
         <div className="bg-[#244D3F] text-white items-center text-center space-y-5 py-10">
           <h1 className="text-6xl font-bold">KeenKeeper</h1>

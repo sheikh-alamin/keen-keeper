@@ -2,6 +2,7 @@
 import { FaPhoneAlt, FaVideo } from "react-icons/fa"
 import { FaMessage } from "react-icons/fa6"
 import { useRouter } from "next/navigation"
+import { toast } from "react-toastify"
 
 const CheckInButtons = ({ friendName }) => {
     const router = useRouter()
@@ -27,17 +28,20 @@ const CheckInButtons = ({ friendName }) => {
             "timeline_events",
             JSON.stringify([newEvent, ...events])
         )
-
+        
         
         router.push("/timeline")
+
+        if (type === "Call") toast(`📞 Called ${friendName}!`)
+        if (type === "Text") toast(`💬 Texted ${friendName}!`)
+        if (type === "Video") toast(`🎥 Video called ${friendName}!`)
     }
 
     return (
         <div className="p-5 shadow-md mt-5 rounded-lg">
             <h3 className="font-semibold">Quick Check-In</h3>
             <div className="grid grid-cols-3 my-4 gap-4">
-                <button
-                    onClick={() => handleCheckIn("Call")}
+                <button onClick={() => handleCheckIn("Call")}
                     className="text-center cursor-pointer text-lg flex flex-col items-center justify-center space-y-3 bg-gray-100 p-3 rounded-lg hover:bg-gray-200"
                 >
                     <FaPhoneAlt />

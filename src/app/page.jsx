@@ -12,7 +12,7 @@ const page = () => {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 max-w-9/12 mx-auto gap-8 mb-10">
                 <div className="text-center py-4 space-y-3 align-middle shadow-md rounded-lg">
-                    <h3 className="font-bold text-8 text-[#244D3f]">50</h3>
+                    <h3 className="font-bold text-8 text-[#244D3f]">10</h3>
                     <p>Total Friends</p>
                 </div>
                 <div className="text-center py-4 space-y-3 align-middle shadow-md rounded-lg">
@@ -28,7 +28,7 @@ const page = () => {
                     <p>Interaction This Month</p>
                 </div>
             </div>
-            <div className="border-t max-w-8/12 mx-auto border-[#E9E9E9] flex justify-between my-10"></div>
+            <div className="border-t max-w-9/12 mx-auto border-[#E9E9E9] flex justify-between my-10"></div>
             <div><h1 className="max-w-8/12 mx-auto mb-10 font-bold text-6">Your Friends</h1></div>
             <FriendsPage/>
         </div>
