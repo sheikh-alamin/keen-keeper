@@ -5,7 +5,7 @@ KeenKeeper is a personal relationship management app that helps people stay in t
 
 # 🛠️ Built With
 - Html
-- CSS
+- CSS (Tailwind CSS)
 - JavaScript (React, Next.js)
 - Chart.js (for analytics visualization)
 
